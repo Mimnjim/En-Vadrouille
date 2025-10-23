@@ -1,0 +1,75 @@
+body {
+    background-color: var(--color-bg-light);
+}
+
+main {
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 600px;
+    margin: 100px auto;
+    padding: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background-color: white;
+}
+
+form label {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+form input[type="button"],
+button {
+    /* background-color: rgb(95, 72, 38); */
+    background-color: #E9B63B;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-family: var(--ff-logo);
+    font-size: 1.5rem;
+    padding: 10px;
+}
+
+form input[type="button"]:hover, 
+button:hover {
+    /* background-color: rgb(115, 92, 58); */
+    background-color: rgb(54, 49, 41);
+}
+
+
+form div {
+    display: flex;
+    flex-direction: column;
+}
+h1 {
+    text-align: center;
+    font-family:  Georgia, 'Times New Roman', Times, serif;
+    margin-bottom: 20px;
+}
+
+span.police-logo {
+    color: black;
+}
+
+div.account {
+    margin-top: 20px;
+    text-align: center;
+}
+

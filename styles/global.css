@@ -1,0 +1,90 @@
+:root {
+    --ff-logo: "BBH Sans Bogle", sans-serif;
+    --ff-second-title: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --ff-text: 'Arial Narrow', Arial, sans-serif;
+
+    --color-dark: #5A9690;
+    --color-light: #E9B63B;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 30px 90px;
+    /* background-color: rgb(231, 84, 84); */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+header a {
+    font-size: 2rem;
+    color: white;
+    text-decoration: none;
+    font-family: var(--ff-logo);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;    
+
+}
+
+span.police-logo {
+    font-family: var(--ff-logo);
+    font-size: 2.5rem;
+    color: white;
+}
+
+.toggle-bg-nav {
+    background-color: #5A9690;
+}
+
+header {
+    background-color: #5A9690;
+}
+
+div.add-billet {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    color: white;
+}
+
+.bx-plus-circle {
+    font-size: 4.5rem;
+    color: var(--color-light);
+    z-index: 9999;
+}
+
+nav.nav-connected-admin {
+    padding: 10px;
+    text-align: center;
+}
+
+nav.nav-connected-admin > h1 {
+    font-family: var(--ff-second-title);
+    font-size: 0.8rem;
+    color: white;
+    margin-right: 15px;
+}
+
+h1.admin-connected {
+    font-family: var(--ff-second-title);
+    font-size: 1rem;
+    color: white;
+    transform: translateX(-20px);
+}

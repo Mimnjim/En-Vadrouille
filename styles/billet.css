@@ -1,0 +1,133 @@
+main {
+    width: 100%;
+    margin-top: 120px;  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+    padding: 30px 100px;
+}
+
+main div.infos-billet {
+    text-align: center;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+main div.infos-billet h3 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.2rem;
+    /* color: rgb(86, 86, 86); */
+    color: black;
+    margin-bottom: 10px;
+}
+
+hr {
+    border: 1.2px solid #E9B63B;
+    width: 50%;
+    margin: auto;
+}
+
+main h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2rem;
+    text-align: center;
+}
+
+main section.billet-content {
+    width: 80%;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+main section.billet-content img {
+    width: 80%;
+    border-radius: 3px;
+}
+
+main section.billet-content p {
+    font-family: 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    width: 80%;
+}
+
+section.comments-section {
+    width: 80%;
+    margin: 50px auto;
+}
+
+section.comments-section h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+section.comments-section .comment {
+    border-bottom: 1px solid #ccc;
+    padding: 15px 0;
+}
+
+span.toggleComments {
+    display: inline-block;
+    margin-bottom: 15px;
+    color: #5A9690;
+    cursor: pointer;
+}
+
+div.list-comments {
+    display: none;
+}
+
+div.add-comment-section {
+    margin-top: 3rem;
+    padding: 20px 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+div.add-comment-section textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: vertical;
+}
+
+div.add-comment-section button {
+    width: 150px;
+    padding: 10px;
+    font-size: 1rem;
+    color: white;
+    background-color: #5A9690;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+div.add-comment-section button:hover {
+    background-color: #487f7a;
+}
+
+div.add-comment-section h3 {
+    font-family: var(--ff-second-title);
+    font-size: 1.5rem;
+}
+
+div.add-comment-section p {
+    font-family: var(--ff-paragraph);
+    font-size: 1rem;
+}
+
+div.add-comment-section label {
+    font-family: var(--ff-second-title);
+    font-size: 1rem;
+}
