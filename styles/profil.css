@@ -4,5 +4,119 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;    
-    padding: 30px 100px;
+    padding: 100px;
 }
+
+main img {
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    margin: 20px auto;
+}
+
+div.image-profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+div.image-profile span {
+    font-family: var(--ff-second-title);
+    color: #555;
+    cursor: pointer;
+    margin-top: 10px;
+    text-decoration: underline;
+}
+
+div.popup-modify-photo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 10000;
+    /* display: none; */
+}
+
+div.popup-modify-photo .popup-content {
+    background-color: white;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    border-radius: 5px;
+    width: 40%;
+    max-width: 90%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+div.popup-modify-photo .popup-content h2 {
+    margin-bottom: 15px;
+    font-family: var(--ff-second-title);
+    text-align: center;
+}
+
+div.popup-modify-photo .popup-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+div.popup-modify-photo .popup-content form input {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+div.popup-modify-photo .popup-content form button {
+    padding: 10px;
+    font-size: 1rem;
+    color: white;
+    background-color: #5A9690;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+div.popup-modify-photo .popup-content form button:hover {
+    background-color: #487f7a;
+}
+
+main h1 {
+    font-family: var(--ff-second-title);
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+main p {
+    font-family: var(--ff-paragraph);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+main a {
+    display: block;
+    width: 200px;
+    margin: 0 auto;
+    padding: 10px;
+    font-size: 1rem;
+    color: white;
+    background-color: #5A9690;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+}   
+
+main a:hover {
+    background-color: #487f7a;
+}       

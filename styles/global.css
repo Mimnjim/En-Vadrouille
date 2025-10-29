@@ -62,6 +62,7 @@ div.add-billet {
     bottom: 30px;
     right: 30px;
     color: white;
+    z-index: 9999;
 }
 
 .bx-plus-circle {
@@ -70,21 +71,135 @@ div.add-billet {
     z-index: 9999;
 }
 
-nav.nav-connected-admin {
+nav.nav-connected {
     padding: 10px;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
 }
 
-nav.nav-connected-admin > h1 {
+nav.nav-connected > h1 {
     font-family: var(--ff-second-title);
     font-size: 0.8rem;
     color: white;
     margin-right: 15px;
 }
 
+nav.nav-connected .dashboard {
+    font-family: var(--ff-text);
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+nav.nav-connected .dashboard:hover {
+    text-decoration: underline;
+}
 h1.admin-connected {
     font-family: var(--ff-second-title);
     font-size: 1rem;
     color: white;
-    transform: translateX(-20px);
+    /* transform: translateX(-20px); */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* POPUP ADMIN AJOUT BILLET */
+
+div.add-billet:hover,
+div.add-billet:hover .bx-plus-circle {
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+
+div.popup-add-billet {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+}
+
+div.popup-add-billet .popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 50%;
+    height: 100vh;
+    margin: auto auto;
+    max-width: 90%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding-top: 7rem;
+    position: relative;
+}
+
+div.popup-add-billet .popup-content h2 {
+    margin-bottom: 15px;
+    font-family: var(--ff-second-title);
+    text-align: center;
+}
+
+div.popup-add-billet .popup-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+div.popup-add-billet .popup-content form input,
+div.popup-add-billet .popup-content form textarea {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+div.popup-add-billet .popup-content form textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+div.popup-add-billet .popup-content form button {
+    padding: 10px;
+    font-size: 1rem;
+    color: white;
+    background-color: #5A9690;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+div.popup-add-billet .popup-content form button:hover {
+    background-color: #487f7a;
+}   
+div.popup-add-billet .popup-content span.close-popup {
+    position: absolute;
+    top: 10px;
+    right: 40px;
+    font-size: 5rem;
+    color: #333;
+    cursor: pointer;
+}
+/* FIN POPUP ADMIN AJOUT BILLET */
+
+footer {
+    background-color: #5A9690;
+    color: white;
+    text-align: center;
+    padding: 25px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 50px;
+    z-index: 999;
 }

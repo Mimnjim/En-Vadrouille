@@ -19,11 +19,9 @@ include_once('cnx.inc.php');
 </head>
 
 <body>
-    <header>
-        <nav>
-            <a href="index.php">En Vadrouille</a>
-        </nav>
-    </header>
+    <?php
+        include_once('header.inc.php'); 
+    ?>
 
     <main>
         <h1>Connectez-vous pour ajouter des commentaires</h1>
@@ -44,7 +42,9 @@ include_once('cnx.inc.php');
         </form>
 
     </main>
-
+    <?php
+        include_once('footer.inc.php');
+    ?>
 </body>
 
 </html>

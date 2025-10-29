@@ -16,11 +16,9 @@
     <link href="https://fonts.googleapis.com/css2?family=BBH+Sans+Bogle&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="index.php">En Vadrouille</a>
-        </nav>
-    </header>    
+    <?php
+        include_once('header.inc.php'); 
+    ?>   
 
     <main>
         <h1>Inscrivez-vous et créez votre compte</h1>
@@ -45,7 +43,9 @@
             </div>
         </form>
     </main>
-
+    <?php
+        include_once('footer.inc.php');
+    ?>
 
 </body>
 </html>

@@ -63,6 +63,7 @@ section.list-billets a:hover {
 
 section.list-billets article {
     width: 400px;
+    height: 450px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 15px;
     border-radius: 10px;
@@ -71,6 +72,7 @@ section.list-billets article {
 section.list-billets article img {
     width: 100%;
     border-radius: 10px;
+    height: 200px;
 }
 
 section.list-billets article h2 {
@@ -83,4 +85,42 @@ section.list-billets article p {
     font-family: 'Arial Narrow', Arial, sans-serif;
     font-size: 1rem;
     line-height: 1.5;
+}
+
+
+div.consulter-archives {
+    text-align: center;
+    margin-bottom: 50px;
+    /* background-color: #f0f0f0; */
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+
+}
+
+.link-archive {
+    display: block;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.2rem;
+    margin-bottom: 50px;
+    text-decoration: none;
+    color: #fff;
+    text-decoration: none;
+
+    transition: color 0.3s ease-in-out;
+    background-color: var(--color-light);
+    font-family: var(--ff-second-title);
+    font-weight: bold;
+    padding: 20px 40px;
+    border-radius: 30px;
+    transition: ease-out all 0.2s;
+}   
+
+.link-archive:hover {
+    background-color: rgb(54, 49, 41);
 }

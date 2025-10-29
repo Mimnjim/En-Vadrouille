@@ -1,0 +1,283 @@
+/* --- GLOBAL --- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: #f4f6f8;
+    color: #333;
+}
+
+main {
+    max-width: 1100px;
+    margin: 120px auto;
+    background-color: #fff;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+div > h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #222;
+}
+
+/* --- TABLEAU --- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 0.95rem;
+}
+
+thead {
+    background-color: #000;
+    color: #fff;
+}
+
+thead th {
+    padding: 12px 15px;
+    text-align: left;
+    font-weight: 600;
+}
+
+tbody tr {
+    border-bottom: 1px solid #e0e0e0;
+    transition: background-color 0.2s;
+}
+
+tbody tr:hover {
+    background-color: #f1f9ff;
+}
+
+tbody td {
+    padding: 12px 15px;
+    vertical-align: middle;
+}
+
+/* --- PHOTO DE PROFIL --- */
+.profile-img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid #ccc;
+}
+
+/* --- ACTIONS --- */
+.actions a {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    margin-right: 8px;
+    transition: all 0.2s;
+}
+
+.actions .edit {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.actions .edit:hover {
+    background-color: #218838;
+}
+
+.actions .delete {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.actions .delete:hover {
+    background-color: #c82333;
+}
+
+/* Ajustement pour les colonnes longues */
+table td:nth-child(3) { /* colonne Commentaire */
+    max-width: 400px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+/* POPS UP */
+/* --- POPUPS ADMIN --- */
+.popup {
+    display: none; /* caché par défaut */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 30px 25px;
+    width: 400px;
+    max-width: 90%;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    position: relative;
+    animation: popupShow 0.2s ease-out;
+}
+
+@keyframes popupShow {
+    0% { transform: scale(0.9); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.popup-content h2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+.popup-content p {
+    font-size: 1rem;
+    margin-bottom: 25px;
+    color: #555;
+}
+
+/* Boutons popup */
+.popup-content button {
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 10px 5px 0 5px;
+    transition: all 0.2s;
+}
+
+.popup-content button.confirm {
+    background-color: #dc3545; /* rouge pour supprimer */
+    color: #fff;
+}
+
+.popup-content button.confirm:hover {
+    background-color: #c82333;
+}
+
+.popup-content button.cancel {
+    background-color: #6c757d; /* gris neutre pour annuler */
+    color: #fff;
+}
+
+.popup-content button.cancel:hover {
+    background-color: #5a6268;
+}
+
+/* Close icon */
+.popup-content .close-popup {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.popup-content .close-popup:hover {
+    color: #dc3545;
+}
+
+/* Formulaire de modification */
+.popup-content .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.popup-content .form-group label {
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.popup-content .form-group input,
+.popup-content .form-group textarea {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    width: 100%;
+    resize: vertical;
+}
+
+.popup-content .form-group textarea {
+    min-height: 80px;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .popup-content {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .popup-content h2 {
+        font-size: 1.4rem;
+    }
+
+    .popup-content button {
+        width: 100%;
+        margin: 10px 0 0 0;
+    }
+}
+
+
+
+
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+    main {
+        margin: 80px 20px;
+        padding: 20px;
+    }
+
+    thead {
+        display: none;
+    }
+
+    tbody tr {
+        display: block;
+        margin-bottom: 15px;
+        border-bottom: 2px solid #ddd;
+        padding: 15px;
+        background-color: #fefefe;
+    }
+
+    tbody td {
+        display: flex;
+        justify-content: space-between;
+        padding: 8px 0;
+    }
+
+    tbody td::before {
+        content: attr(data-label);
+        font-weight: 600;
+        color: #555;
+    }
+
+    .actions {
+        margin-top: 10px;
+        text-align: right;
+    }
+}

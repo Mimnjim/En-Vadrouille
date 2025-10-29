@@ -45,6 +45,7 @@ button {
     font-family: var(--ff-logo);
     font-size: 1.5rem;
     padding: 10px;
+    transition: ease-out all 0.2s;
 }
 
 form input[type="button"]:hover, 

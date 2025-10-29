@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include_once('cnx.inc.php');
+    include_once('cnx.inc.php');    
 
     if(isset($_SESSION['username']) && !empty($_SESSION['username']) && $_SESSION['username'] === 'admin') {
         $admin_loggned_in = true;
@@ -8,18 +8,18 @@
         $admin_loggned_in = false;
     }
 
+
 ?>
 
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SharingBlog - Page d'accueil</title>
+    <title>Document</title>
 
-    <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/global.css">
+    <link rel="stylesheet" href="styles/archive.css">
 
     <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
 
@@ -27,12 +27,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=BBH+Sans+Bogle&display=swap" rel="stylesheet">
 </head>
-
 <body>
     <?php
-        include_once('header.inc.php'); 
+        include_once('header.inc.php');
     ?>
-    
+
     <?php
         if($admin_loggned_in) {
             echo "
@@ -64,62 +63,32 @@
             ";
         }
     ?>
-    
+
     <main>
-        <section class="hero-section">
-            <img src="images/bg-en-vadrouille.png" alt="">
-            <div class="elements-hero">
-                <h1>En Vadrouille</h1>
-                <h2>Découvre mes bons plans au fil des balades</h2>
-            </div>
-        </section>
-
-        <h1 class="title-section">Les dernieres sorties</h1>
-
+        <h1>Tous les billets des sorties</h1>
         <section class="list-billets">
-
             <?php
-                $query = "SELECT * FROM billets ORDER BY date DESC LIMIT 3";
+                $query = "SELECT * FROM billets ORDER BY date DESC";
                 $stmt = $cnx->query($query);
                 $billets = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
                 foreach($billets as $billet) {
                     echo "
                         <a href='billet.php?id=" . htmlspecialchars($billet['id_billet']) . "'>
-                            <article>
-                                <img src='" . htmlspecialchars($billet['image']) . "' alt=''>
-                                <h2>" . htmlspecialchars($billet['titre']) . "</h2>
-                                <p>
-                                    " . htmlspecialchars(substr($billet['description'], 0, 120)) . "...
-                                </p>
-                            </article>
+                            <div class='billet-item'>
+                                <img src='" . $billet['image'] . "' alt='Image du billet " . $billet['titre'] . "'>
+                                <h2>" . substr($billet['titre'], 0, 150) . "</h2>
+                                <p>" . substr($billet['description'], 0, 150) . "...</p>
+                            </div>
                         </a>
                     ";
                 }
-
             ?>
         </section>
-
-        <div class="consulter-archives">
-            <a href="archive.php" class="link-archive">Consulter les archives des billets</a>
-        </div>
-
     </main>
     <?php
         include_once('footer.inc.php');
     ?>
     <script src="js/popup_addBillet.js"></script>
-    <script>
-        let header = document.querySelector('header');
-        header.style.background = 'transparent';
-
-        window.addEventListener('scroll', function() {
-            if (window.scrollY > 752) {
-                header.style.background = '#5A9690';
-            } else {
-                header.style.background = 'transparent';
-            }
-        });
-    </script>
 </body>
 </html>
