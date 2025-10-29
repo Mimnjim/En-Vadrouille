@@ -10,7 +10,13 @@
         if(isset($_SESSION['username'])) {
             echo "
                 <nav class='nav-connected'>
-                    <a href='dashboard.php' class='dashboard'>Tableaux de bord</a>
+
+            ";
+            if(isset($_SESSION['username']) && $_SESSION['username'] === 'admin') {
+                echo "<a href='dashboard.php' class='dashboard'>Tableaux de bord</a>";
+            }    
+
+            echo "
                     <a href='profil.php'><i class='bx bx-user-circle'></i></a>
                 </nav>
             ";

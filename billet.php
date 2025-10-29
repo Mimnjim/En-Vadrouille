@@ -106,7 +106,10 @@
                         <span>Publié le " . $billet['date'] . " par Admin</span>
                         <hr>
                         <h1 class='title-section'>" . $billet['titre'] . "</h1>
-                    </div>
+                    </div>"; 
+
+            if(isset($admin_loggned_in) && $admin_loggned_in) {
+                echo "
                     <div class='menu-admin'>
                         <a href='#' class='menu-toggle'><i class='bx bx-dots-vertical-rounded'></i></a>
                         <div class='display-menu-list-admin'>
@@ -114,6 +117,10 @@
                             <a href='#' class='edit'><i class='bx bx-edit'></i> Modifier le billet</a>
                         </div>
                     </div>
+                ";
+            }
+
+            echo "
                 </div>
 
                 <section class='billet-content'>
