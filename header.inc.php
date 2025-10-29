@@ -2,7 +2,7 @@
     <a href="index.php">En Vadrouille</a>
 
     <?php
-        if(isset($admin_loggned_in)) {  
+        if(isset($_SESSION['username']) && $_SESSION['username'] === 'admin') {  
             echo "<h1 class='admin-connected'>Vous êtes connecté.e.s en tant qu'Admin</h1>";
         }
     ?>
